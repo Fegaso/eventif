@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% block content %}
 <!-- OVERVIEW -->
 <section>
@@ -19,7 +20,6 @@
                     {{ form.name.errors }}
                     {{ form.name }}
                 </div>
-
                 <div class="form-row label-block input-text">
                     <label for="{{ form.cpf.id_for_label }}">{{ form.cpf.label }}</label>
                     {{ form.cpf.errors }}
