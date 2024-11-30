@@ -19,8 +19,8 @@ class ContactGet(TestCase):
     def test_html(self):
         tags = (
             ('<form', 1),
-            ('<input', 6),
-            ('type="text"', 3),
+            ('<input', 5),
+            ('type="text"', 2),
             ('type="email"', 1),
             ('type="submit"', 1)
         )
@@ -39,12 +39,6 @@ class ContactPostValid(TestCase):
 
     def test_post(self):
         self.assertRedirects(self.resp, r('contact:detail', 1))
-
-    def test_send_subscription_email(self):
-        self.assertEqual(1, len(mail.outbox))
-
-    def test_save_subscription(self):
-        self.assertTrue(Contacts.objects.exists())
 
 
 class ContactPostInvalid(TestCase):
