@@ -22,4 +22,5 @@ urlpatterns = [
     path('', home, name='home'),
     path('inscricao/', include('subscriptions.urls')),
     path('admin/', admin.site.urls),
+    path('contato/', include('contact.urls', namespace='contact')),
 ]
