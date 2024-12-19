@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- OVERVIEW -->
+<section>
+    <div class="content row padding-bottom-3 desktop-12 container">
+        <h1>Obrigado por contactar o Eventif!</h1>
+        <div class="desktop-6">
+            <p>Estes foram os dados que você enviou no seu contato.</p>
+            
+            <ul>
+                <li>Nome: {{ contacts.name }}</li>
+                <li>Email: {{ contacts.email }}</li>
+                <li>Telefone: {{ contacts.phone }}</li>
+                <li>Mensagem: {{ contacts.message }}</li>
+            </ul>
+
+            <p>Em até 48 horas úteis alguem da nossa equipe responderá o seu contato.</p>
+        </div>
+    </div>
+</section>
+{% endblock content %}
